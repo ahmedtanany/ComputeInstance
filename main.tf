@@ -31,8 +31,6 @@ module "instance_nonflex" {
   source_ocid           = var.source_ocid
   source_type           = var.source_type
   cloud_agent_plugins   = var.cloud_agent_plugins
-  # operating system parameters
-  ssh_public_keys = var.ssh_public_keys
   # networking parameters
   public_ip            = var.public_ip # NONE, RESERVED or EPHEMERAL
   subnet_ocids         = [oci_core_subnet.example_sub.id]
@@ -65,8 +63,6 @@ module "instance_nonflex_custom" {
   source_type                 = var.source_type
   instance_flex_memory_in_gbs = 8 # only used if shape is Flex type
   instance_flex_ocpus         = 1 # only used if shape is Flex type
-  # operating system parameters
-  ssh_public_keys = var.ssh_public_keys
   # networking parameters
   public_ip            = var.public_ip # NONE, RESERVED or EPHEMERAL
   subnet_ocids         = [oci_core_subnet.example_sub.id]
